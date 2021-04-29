@@ -4,6 +4,15 @@ Rails.application.routes.draw do
 
   get '/about' => 'about#index'
 
+  # for user login
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
+
+  # for user registration
+  get '/signup' => 'users#new'
+  post '/users' => 'users#create'
+
   resources :products, only: [:index, :show]
   resources :categories, only: [:show]
 
