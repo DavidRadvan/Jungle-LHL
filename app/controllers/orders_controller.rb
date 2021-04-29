@@ -2,6 +2,17 @@ class OrdersController < ApplicationController
 
   def show
     @order = Order.find(params[:id])
+    items = LineItem.where(order_id: params[:id])
+    @products = enhanced_order(items)
+  end
+
+  def enhanced_order(lineItems)
+    keyStorage = {  }
+    for item in lineItems
+      keyStorage[item[:product_id]] = item[:quantity]
+    end
+    productList = Product.where(id: keyStorage.keys).map {|product| { product:product, quantity: keyStorage[product.id] } }
+    return productList
   end
 
   def create
