@@ -1,4 +1,9 @@
 class Admin::ProductsController < ApplicationController
+  http_basic_authenticate_with name: ENV['USERNAME'], password: ENV['PASSWORD'], except: :not_authorized
+
+  def not_authorized
+    redirect_to("/")
+  end
 
   def index
     @products = Product.order(id: :desc).all
