@@ -2,7 +2,11 @@
 
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example. Users can browse select merchandise, add items to their cart, and checkout. Admins can add products or categories to the website, and review stock.
 
-## Screenshots 
+## Screenshots
+!["Front Page"](https://github.com/DavidRadvan/Jungle-LHL/blob/master/screenshots/frontpage.png)
+!["Product Page"](https://github.com/DavidRadvan/Jungle-LHL/blob/master/screenshots/product.png)
+!["Cart Page"](https://github.com/DavidRadvan/Jungle-LHL/blob/master/screenshots/cart.png)
+!["Admin Product Page"](https://github.com/DavidRadvan/Jungle-LHL/blob/master/screenshots/adminproducts.png)
 
 ## Additional Steps for Apple M1 Machines
 
